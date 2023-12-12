@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Dec  3 17:13:29 2023
+# Process ID: 1812
+# Current directory: C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/fifo16x64_synth_1
+# Command line: vivado.exe -log fifo16x64.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo16x64.tcl
+# Log file: C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/fifo16x64_synth_1/fifo16x64.vds
+# Journal file: C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/fifo16x64_synth_1\vivado.jou
+# Running On: LAPTOP-S8S4C16E, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 34065 MB
+#-----------------------------------------------------------
+source fifo16x64.tcl -notrace

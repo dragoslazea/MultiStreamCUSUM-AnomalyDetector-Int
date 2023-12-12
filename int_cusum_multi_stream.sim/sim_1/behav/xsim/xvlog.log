@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/fifo16x64/sim/fifo16x64.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo16x64
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

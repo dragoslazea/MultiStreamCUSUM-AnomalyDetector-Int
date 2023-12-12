@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "../../../ipstatic/hdl" \
+"../../../../int_cusum_multi_stream.gen/sources_1/ip/fifo16x32/sim/fifo16x32.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
