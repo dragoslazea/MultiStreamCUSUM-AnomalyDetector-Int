@@ -1,0 +1,1 @@
+--incr --debug typical --relax --mt auto -L axis_infrastructure_v1_1_0 -L axis_combiner_v1_1_24 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot axis_combiner xil_defaultlib.axis_combiner xil_defaultlib.glbl -log elaborate.log

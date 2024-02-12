@@ -4,8 +4,11 @@ Apr 18 2022
 16:05:34
 C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/fifo16x64/sim/fifo16x64.v,1701616405,verilog,,,,fifo16x64,,,../../../../int_cusum_multi_stream.ip_user_files/ipstatic/hdl,,,,,
 C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.sim/sim_1/behav/xsim/glbl.v,1649976174,verilog,,,,glbl,,,,,,,,
-C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sim_1/new/testbench_2_sensors_id_from_file.vhd,1702243029,vhdl,,,,testbench_2_sensors_id_from_file,,,,,,,,
+C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sim_1/new/testbench_anomaly_detector.vhd,1706182650,vhdl,,,,testbench_anomaly_detector,,,,,,,,
+C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/axi_register.vhd,1702900650,vhdl,,,,axi_register,,,,,,,,
+C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/multi_stream_cusum_anomaly_detector_top_module.vhd,1703692760,vhdl,,,,multi_stream_cusum_anomaly_detector_top_module,,,,,,,,
 C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/multi_stream_int_adder_subtractor.vhd,1701615309,vhdl,,,,multi_stream_int_adder_subtractor,,,,,,,,
-C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/multi_stream_int_cumulative_sums_detector.vhd,1702241928,vhdl,,,,multi_stream_int_cumulative_sums_detector,,,,,,,,
+C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/multi_stream_int_cumulative_sums_detector.vhd,1702936506,vhdl,,,,multi_stream_int_cumulative_sums_detector,,,,,,,,
 C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/multi_stream_int_max.vhd,1701895847,vhdl,,,,multi_stream_int_max,,,,,,,,
 C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/multi_stream_int_threshold_exceeding_detector.vhd,1701615740,vhdl,,,,multi_stream_int_threshold_exceeding_detector,,,,,,,,
+C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.srcs/sources_1/new/stream_selector.vhd,1703716823,vhdl,,,,stream_selector,,,,,,,,

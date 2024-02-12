@@ -1,0 +1,1 @@
+vopt +acc=npr -l elaborate.log -L xil_defaultlib -L xpm -L axis_infrastructure_v1_1_0 -L axis_register_slice_v1_1_26 -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.axis_register_slice xil_defaultlib.glbl -o axis_register_slice_opt

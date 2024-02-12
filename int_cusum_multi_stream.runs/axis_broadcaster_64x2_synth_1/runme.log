@@ -1,0 +1,326 @@
+
+*** Running vivado
+    with args -log axis_broadcaster_64x2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source axis_broadcaster_64x2.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source axis_broadcaster_64x2.tcl -notrace
+Command: synth_design -top axis_broadcaster_64x2 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 5928
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx2022/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'axis_broadcaster_64x2' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/synth/axis_broadcaster_64x2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'top_axis_broadcaster_64x2' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/top_axis_broadcaster_64x2.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_broadcaster_v1_1_25_core' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/axis_broadcaster_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/axis_infrastructure_v1_1_vl_rfs.v:991]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_vector2axis' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/axis_infrastructure_v1_1_vl_rfs.v:991]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/axis_infrastructure_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_axis2vector' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/axis_infrastructure_v1_1_vl_rfs.v:809]
+INFO: [Synth 8-6155] done synthesizing module 'axis_broadcaster_v1_1_25_core' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/axis_broadcaster_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'tdata_axis_broadcaster_64x2' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/tdata_axis_broadcaster_64x2.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'tdata_axis_broadcaster_64x2' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/tdata_axis_broadcaster_64x2.v:49]
+INFO: [Synth 8-6157] synthesizing module 'tuser_axis_broadcaster_64x2' [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/tuser_axis_broadcaster_64x2.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'tuser_axis_broadcaster_64x2' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/tuser_axis_broadcaster_64x2.v:49]
+INFO: [Synth 8-6155] done synthesizing module 'top_axis_broadcaster_64x2' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/hdl/top_axis_broadcaster_64x2.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axis_broadcaster_64x2' (0#1) [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/synth/axis_broadcaster_64x2.v:53]
+WARNING: [Synth 8-7129] Port tuser[1] in module tuser_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tuser[0] in module tuser_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[127] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[126] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[125] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[124] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[123] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[122] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[121] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[120] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[119] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[118] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[117] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[116] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[115] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[114] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[113] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[112] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[111] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[110] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[109] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[108] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[107] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[106] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[105] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[104] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[103] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[102] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[101] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[100] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[99] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[98] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[97] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[96] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[95] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[94] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[93] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[92] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[91] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[90] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[89] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[88] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[87] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[86] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[85] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[84] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[83] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[82] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[81] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[80] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[79] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[78] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[77] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[76] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[75] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[74] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[73] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[72] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[71] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[70] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[69] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[68] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[67] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[66] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[65] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tdata[64] in module tdata_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[7] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[6] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[5] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[4] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[3] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[2] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[1] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[7] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[6] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[5] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[4] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[3] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[2] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[1] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TKEEP[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TLAST in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TDEST[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_0_util_axis2vector is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1293.586 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/axis_broadcaster_64x2_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.gen/sources_1/ip/axis_broadcaster_64x2/axis_broadcaster_64x2_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/axis_broadcaster_64x2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/axis_broadcaster_64x2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1293.586 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1293.586 ; gain = 0.000
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/axis_broadcaster_64x2_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'inst/broadcaster_core/MI_SLOT[0].util_vector2axis' (axis_infrastructure_v1_1_0_util_vector2axis) to 'inst/broadcaster_core/MI_SLOT[1].util_vector2axis'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s_axis_tstrb[7] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[6] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[5] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[4] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[3] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[2] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[1] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[0] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[7] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[6] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[5] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[4] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[3] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[2] in module top_axis_broadcaster_64x2 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT3 |     2|
+|2     |LUT5 |     1|
+|3     |LUT6 |     2|
+|4     |FDRE |     2|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1293.586 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1293.586 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1293.586 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1297.902 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: cafb30f0
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1297.902 ; gain = 4.316
+INFO: [Common 17-1381] The checkpoint 'C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/axis_broadcaster_64x2_synth_1/axis_broadcaster_64x2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP axis_broadcaster_64x2, cache-ID = 43de88e873a4f4d2
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/IVA/Research/int_cusum_multi_stream/int_cusum_multi_stream.runs/axis_broadcaster_64x2_synth_1/axis_broadcaster_64x2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file axis_broadcaster_64x2_utilization_synth.rpt -pb axis_broadcaster_64x2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 12 09:54:39 2023...

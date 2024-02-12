@@ -38,9 +38,9 @@ component multi_stream_int_cumulative_sums_detector is
            drift_valid : in STD_LOGIC;
            
            -- outputs
-           abnormal_data : out STD_LOGIC_VECTOR (32 downto 0);
-           abnormal_ready : in STD_LOGIC;
-           abnormal_valid : out STD_LOGIC;
+           labeled_data : out STD_LOGIC_VECTOR (63 downto 0);
+           labeled_data_ready : in STD_LOGIC;
+           labeled_data_valid : out STD_LOGIC;
            
            timestamp_data : out STD_LOGIC_VECTOR (31 downto 0);
            timestamp_ready : in STD_LOGIC;
@@ -58,17 +58,18 @@ signal nrst, prev_nrst : STD_LOGIC := '1';
 --signal Tt, Tt_1 : STD_LOGIC_VECTOR (63 downto 0) := x"0000000000000000";
 signal Tt, Tt_1 : STD_LOGIC_VECTOR (63 downto 0) := x"0000000000010000";
 signal th, drift, timestamp : STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
-signal abnormal : STD_LOGIC_VECTOR (32 downto 0) := (others => '0');
+signal labeled_data : STD_LOGIC_VECTOR (63 downto 0) := (others => '0');
 
 -- ready signals
-signal Tt_ready, Tt_1_ready, th_ready, drift_ready, timestamp_ready, abnormal_ready : STD_LOGIC;
+signal Tt_ready, Tt_1_ready, th_ready, drift_ready, timestamp_ready, labeled_data_ready : STD_LOGIC;
 
 -- valid signals
-signal Tt_valid, Tt_1_valid, th_valid, drift_valid, timestamp_valid, abnormal_valid : STD_LOGIC;
+signal Tt_valid, Tt_1_valid, th_valid, drift_valid, timestamp_valid, labeled_data_valid : STD_LOGIC;
 
 
 signal rd_count, wr_count : integer := 0;
 signal end_of_reading : std_logic := '0';
+signal first : std_logic := '1';
 
 type measurements_type is array (0 to 5000) of std_logic_vector (63 downto 0);
 signal measurements : measurements_type := (others => (others => '0'));
@@ -96,15 +97,15 @@ begin
         threshold_data => "00000000000000000000010111011100", -- 1500
         threshold_ready => th_ready,
         threshold_valid => '1',
-        abnormal_data => abnormal,
-        abnormal_ready => abnormal_ready,
-        abnormal_valid => abnormal_valid,
+        labeled_data => labeled_data,
+        labeled_data_ready => labeled_data_ready,
+        labeled_data_valid => labeled_data_valid,
         timestamp_data => timestamp,
         timestamp_ready => timestamp_ready,
         timestamp_valid => timestamp_valid
     );
     
-    abnormal_ready <= '1';
+    labeled_data_ready <= '1';
     timestamp_ready <= '1';
     
     process (clk)
@@ -142,10 +143,10 @@ begin
                     if Tt_ready = '1' and Tt_1_ready = '1' then
                         readline(sensors_data, in_line);
                         read(in_line, lqi);
+                        
+                        first <= '0';
                     
                         Tt_1 <= Tt;
-                        
-                        
                         Tt <= lqi;
                         
                         measurements(rd_count) <= Tt;
@@ -173,6 +174,11 @@ begin
         end if;
     end process;
     
+--    Tt_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' and first = '0' else '0';
+--    Tt_1_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' and first = '0' else '0';
+--    th_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' and first = '0' else '0';
+--    drift_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' and first = '0' else '0';
+    
     Tt_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' else '0';
     Tt_1_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' else '0';
     th_valid <= '1' when Tt_ready = '1' and Tt_1_ready = '1' else '0';
@@ -180,7 +186,8 @@ begin
     
     process 
 --        file results : text open write_mode is "C:\IVA\Research\multi_stream_cusum_anomaly_detector\04-12-22_results_bin_short.csv";
-        file results : text open write_mode is "C:\IVA\Research\int_cusum_multi_stream\results_1m_vineyard_phy_mod_bin_st1.txt";
+        file results : text open write_mode is "C:\IVA\Research\int_cusum_multi_stream\results_my_reg_1m_vineyard_phy_mod_bin_st1.txt";
+--        file results : text open write_mode is "C:\IVA\Research\int_cusum_multi_stream\results_opt_1m_vineyard_phy_mod_bin_st1.txt";
 --        file results : text open write_mode is "C:\IVA\Research\multi_stream_cusum_anomaly_detector\test_results_s2_23_values.csv";
         variable out_line : line;
     begin
@@ -191,16 +198,14 @@ begin
         end if;
     
         if wr_count <= rd_count then
-            if abnormal_valid = '1' then
+            if labeled_data_valid = '1' then
                 if wr_count /= 0 then
-                    write(out_line, to_integer(signed(timestamp - 1)));
+                    write(out_line, to_integer(signed(timestamp)));
                     write(out_line, string'(", "));
-                    write(out_line, measurements(wr_count));
-                    write(out_line, string'(", "));
-                    write(out_line, abnormal);
+                    write(out_line, labeled_data);
                     writeline(results, out_line);
                     
-                    if abnormal(0) = '1' then
+                    if labeled_data(8) = '1' then
                         report "abnormal ";
                     end if;
                 
